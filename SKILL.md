@@ -1,6 +1,6 @@
 ---
 name: ecommerce-website-data
-version: 1.2.5
+version: 1.2.6
 description: >
   Free, instant access to live data on 14M+ e-commerce stores.
   Capabilities: (1) Keyword + filter search (2) Full store analytics
