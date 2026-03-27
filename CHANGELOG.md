@@ -6,7 +6,7 @@ All notable changes to this skill will be documented in this file.
 
 ### Fixed
 
-- Updated SKILL.md document.
+- Updated SKILL.md README.md document.
 
 
 ## [1.2.4] - 2026-03-26
