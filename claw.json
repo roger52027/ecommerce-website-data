@@ -1,0 +1,32 @@
+{
+  "name": "ecommerce-website-data",
+  "version": "1.2.4",
+  "description": "Search and retrieve detailed analytics for 14M+ e-commerce domains. Keyword search, domain analytics, GMV revenue, traffic, social media, tech stack, and more — powered by ECcompass REST API.",
+  "author": "eccompass.ai",
+  "license": "Proprietary",
+  "permissions": ["network"],
+  "credentials": {
+    "APEX_TOKEN": {
+      "description": "ECcompass API access token. Sign up at https://eccompass.ai, then go to Dashboard → API Access → Create Token.",
+      "required": true
+    }
+  },
+  "requires": {
+    "bins": ["python3"],
+    "env": ["APEX_TOKEN"]
+  },
+  "entry": "SKILL.md",
+  "tags": [
+    "ecommerce",
+    "analytics",
+    "competitor-analysis",
+    "market-intelligence",
+    "domain-research",
+    "shopify",
+    "dtc"
+  ],
+  "models": ["claude-*", "gpt-*", "gemini-*"],
+  "pricing": "free",
+  "support_url": "https://eccompass.ai",
+  "homepage": "https://eccompass.ai"
+}
