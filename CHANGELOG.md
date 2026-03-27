@@ -2,6 +2,13 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.2.5] - 2026-03-26
+
+### Fixed
+
+- Updated SKILL.md document.
+
+
 ## [1.2.4] - 2026-03-26
 
 ### Fixed

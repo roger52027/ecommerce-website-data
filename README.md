@@ -1,18 +1,19 @@
-# ECcompass E-Commerce Intelligence
+# EcCompass E-Commerce Website Data
 
-> Search and analyze **14,000,000+** e-commerce domains — right from your AI agent.
+> Free, one-click AI agent skill for searching and analyzing 14M+ ecommerce stores.
 
-ECcompass E-Commerce Intelligence gives your AI agent direct access to the world's largest DTC e-commerce database. Ask natural language questions like "find Shopify stores selling pet food" or "look up ooni.com" and get structured analytics instantly.
+Ask natural language questions like "find Shopify stores selling pet food" and get structured analytics instantly — GMV, tech stack, installed apps, and verified contacts.
 
 ## Features
 
 - **Keyword Search** — Search across 14M+ domains by product category, brand name, or any keyword. Results ranked by relevance × GMV.
-- **Domain Analytics** — Get 100+ fields for any domain: GMV revenue (2023–2026), traffic, social media (6 platforms with 30d/90d trends), product catalog, tech stack, geography, contact info, and reviews.
+- **Domain Analytics** — Get 100+ fields for any domain: GMV revenue (2023–2026), verified contact info, traffic, social media (6 platforms with 30d/90d trends), product catalog and tech stack .
 - **Competitor Analysis** — Discover competitors by keyword, then drill into detailed analytics for each.
 - **JSON Export** — Get raw JSON output for programmatic processing and integration.
 
 ## Setup
 
+**100% Free. One-minute setup.**
 1. Sign up at [https://eccompass.ai](https://eccompass.ai)
 2. Go to **Dashboard → API Access → Create Token**
 3. Set the environment variable:
@@ -48,6 +49,7 @@ python3 scripts/query.py contacts ooni.com
 
 ## Data Coverage
 
+Powered by ECcompass.ai — one of the world's largest DTC databases — this skill delivers free, monthly-updated live data on 14M+ global ecommerce stores.
 | Metric | Value |
 |--------|-------|
 | Total domains | 14,000,000+ |
@@ -59,7 +61,7 @@ python3 scripts/query.py contacts ooni.com
 
 ## Analytics Fields
 
-Each domain profile includes:
+Each domain profile includes 100+ data points across 6 key categories:
 
 - **Basic Info** — domain, brand name, platform, plan, status, creation date, language
 - **Revenue** — GMV 2023–2026, last 12 months, YoY growth, estimated monthly/yearly sales

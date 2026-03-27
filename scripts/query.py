@@ -12,7 +12,7 @@ Usage:
   python3 query.py contacts ooni.com
 """
 
-__version__ = "1.2.4"
+__version__ = "1.2.5"
 
 import os
 import sys

@@ -1,6 +1,6 @@
 ---
 name: ecommerce-website-data
-version: 1.2.4
+version: 1.2.5
 description: >
   Free, instant access to live data on 14M+ e-commerce stores.
   Capabilities: (1) Keyword + filter search (2) Full store analytics
@@ -24,19 +24,21 @@ requires:
 
 ## **Ecommerce Website Data**
 
-Free one-click access to live data on 14M+ ecommerce stores — website GMV, ecommerce data, and lead contacts. Built for finding qualifed leads, analyzing competitors, and researching any store's performance.
+Free, one-click access to live data on 14M+ ecommerce stores. Ask natural language questions like "find Shopify stores selling pet food" and get structured analytics instantly — GMV, tech stack, installed apps, and verified contacts.
 
-## **Quick Reference**
+## **Core Capabilities**
 
-| Data Type | What You Get |
-| --- | --- |
-| Website GMV | Monthly and annual revenue estimates with historical trends |
-| Ecommerce Data | Platform used, plugins/apps installed, traffic volume |
-| Lead Contacts | Verified business emails and LinkedIn profiles |
+Keyword Search — Search across 14M+ domains by product category, brand name, or any keyword. Results ranked by relevance × GMV.
+
+Domain Analytics — Get 100+ fields for any domain: GMV revenue (2023–2026), verified contact info, traffic, social media (6 platforms with 30d/90d trends), product catalog and tech stack .
+
+Competitor Analysis — Discover competitors by keyword, then drill into detailed analytics for each.
+
+JSON Export — Get raw JSON output for programmatic processing and integration.
 
 ## **Data Coverage**
 
-The database covers 14M+ ecommerce live stores globally. All data is refreshed monthly and free to use. Source: eccompass.ai
+Powered by ECcompass.ai — one of the world's largest DTC databases — this skill delivers free, monthly-updated live data on 14M+ global ecommerce stores.
 
 | Metric | Value |
 | --- | --- |
@@ -45,34 +47,27 @@ The database covers 14M+ ecommerce live stores globally. All data is refreshed m
 | Platforms | Shopify, WooCommerce, Wix, Squarespace, and more |
 | GMV data | 2023–2026 yearly + last 12 months |
 | Social media | Instagram, TikTok, Twitter/X, YouTube, Facebook, Pinterest |
+| Lead Contacts | Verified LinkedIn profiles and business emails |
 | Update frequency | Monthly |
 
-## **Core Capabilities**
+## **Analytics Fields**
 
-- Lead Discovery: Describe your ideal customer by revenue, platform, region, or category—instantly get matching stores with verified contacts.
-
-- Store Intelligence: Enter any store URL to retrieve historical GMV estimates, traffic volume, tech stack details, and installed apps or plugins.
-
-- Competitor Lookup: Provide a store to receive a list of competitors based on product category and GMV size.
-
-## **Sample Data Fields**
-
-Each domain profile can include 50+ data points across 6 key categories:
+Each domain profile includes 100+ data points across 6 key categories:
 
 - Store Identity: domain, brand name, platform, plan, status, language, creation date
-- Revenue & Growth: GMV by year (2023–2026), last 12M GMV, YoY growth, est. monthly & annual sales
 - Catalog: product category, efficacy, use case, product count, price range
+- Revenue & Growth: GMV by year (2023–2026), last 12M GMV, YoY growth, est. monthly & annual sales
 - Audience & Reach: monthly visits, page views, social followers & 30/90d change (6 platforms)
 - Tech Stack: theme, installed apps, monthly app spend, technologies, vendor ratings & pricing
 - Location & Contacts: country, city, state, emails, phones, LinkedIn profiles, contact page URL
 
 ## **Usage Notes**
 
-- Data freshness: Store data is live and updated monthly, not a static snapshot.
+Data freshness — Store data is live and updated monthly, not a static snapshot.
 
-- GMV accuracy: Revenue figures are estimates based on traffic and industry benchmarks, not actual financial records.
+GMV accuracy — Revenue figures are estimates based on traffic and industry benchmarks, not actual financial records.
 
-- Contact verification: All emails and LinkedIn profiles have been verified.
+Contact verification — All emails and LinkedIn profiles have been verified.
 
 ## **Scope**
 
@@ -94,7 +89,7 @@ export APEX_TOKEN="your_token_here"
 
 ## **Quick Start**
 
-**IMPORTANT: Always use the Python script for API calls. It has the correct base URL and authentication built in.**
+**IMPORTANT**: Always use the Python script for API calls. It has the correct base URL and authentication built in.
 
 ```bash
 # Search by keyword
@@ -137,11 +132,11 @@ python3 {baseDir}/scripts/query.py contacts ooni.com
 https://api.eccompass.ai
 ```
 
-**CRITICAL: All API paths start with `/public/api/v1/`. The `/public` prefix is mandatory — without it, you will get an authentication error. Never omit `/public` from the path.**
+**CRITICAL**: All API paths start with `/public/api/v1/`. The `/public` prefix is mandatory — without it, you will get an authentication error. Never omit `/public` from the path.
 
 ## **API Endpoints**
 
-### 1. Search — `POST https://api.eccompass.ai/public/api/v1/search`
+### **1. Search — **`POST https://api.eccompass.ai/public/api/v1/search`
 
 Full URL: `https://api.eccompass.ai/public/api/v1/search` (POST, Content-Type: application/json)
 
@@ -164,11 +159,11 @@ curl -X POST https://api.eccompass.ai/public/api/v1/search \
 
 All body fields are optional.
 
-**Exists filter**: Use `"exists": ["tiktokUrl", "emails"]` to require that specific fields are present and not empty. This is the correct way to express "has a TikTok page" or "has contact email". Common exists fields: `tiktokUrl`, `instagramUrl`, `facebookUrl`, `youtubeUrl`, `twitterUrl`, `linkedinUrl`, `emails`, `phones`.
+Exists filter: Use `"exists": ["tiktokUrl", "emails"]` to require that specific fields are present and not empty. This is the correct way to express "has a TikTok page" or "has contact email". Common exists fields: `tiktokUrl`, `instagramUrl`, `facebookUrl`, `youtubeUrl`, `twitterUrl`, `linkedinUrl`, `emails`, `phones`.
 
-**Keyword search covers**: domain, title, description, tags, categories, **platform name**, merchant name, technologies, and **installed apps**. So "klaviyo" in keyword will match stores using the Klaviyo app. You do NOT need to know exact values — just put the search term in the keyword field.
+Keyword search covers: domain, title, description, tags, categories, **platform name**, merchant name, technologies, and **installed apps**. So "klaviyo" in keyword will match stores using the Klaviyo app. You do NOT need to know exact values — just put the search term in the keyword field.
 
-**Filters are case-insensitive** and support both single values and arrays (OR logic). Any field listed below can be used as a filter, range, or exists condition.
+Filters are case-insensitive and support both single values and arrays (OR logic). Any field listed below can be used as a filter, range, or exists condition.
 
 ```json
 // Single value
@@ -184,55 +179,55 @@ All body fields are optional.
 {"filters": {"countryCode4": "US", "installedApps": "klaviyo"}}
 ```
 
-### Complete Field Reference
+### **Complete Field Reference**
 
-**Geography** (Keyword, for filters):
+Geography (Keyword, for filters):
 `countryCode4`, `countryCode`, `countryCode2`, `countryCode3`, `city`, `state`, `region`, `subregion`, `zip`, `streetAddress`, `latitude`, `longitude`, `companyLocation`(Text)
 
-**Platform & Store** (Keyword, for filters):
+Platform & Store (Keyword, for filters):
 `platform`, `plan`, `status`, `platformDomain`, `lastPlatform`, `lastPlan`, `lastPlatformChanged`, `lastPlanChanged`, `created`, `languageCode`, `currency`, `salesChannels`
 
-**Content** (Text, for filters — partial match):
+Content (Text, for filters — partial match):
 `description`, `title`, `merchantName`, `categories`, `tags`, `tagsV5`, `metaDescription`, `metaKeywords`, `features`
 
-**Products** (Keyword/Text for filters):
+Products (Keyword/Text for filters):
 `averageProductPrice`(Keyword), `avgPriceFormatted`(Keyword), `categoriesV1`(Keyword), `tagsFirst`(Keyword)
 
-**Tech Stack** (Text, for filters — partial match):
+Tech Stack (Text, for filters — partial match):
 `technologies`, `installedApps`, `theme`, `themeVendor`, `themeSpend`, `themeVersion`(Keyword)
 
-**Contact** (Text, best with exists):
+Contact (Text, best with exists):
 `emails`, `phones`, `contactPageUrl`
 
-**Social URLs** (for exists — check presence):
+Social URLs (for exists — check presence):
 `tiktokUrl`, `instagramUrl`, `facebookUrl`, `youtubeUrl`, `twitterUrl`, `linkedinUrl`, `pinterestUrl`, `linkedinAccount`(Keyword)
 
-**Revenue** (Long, for ranges — all in USD):
+Revenue (Long, for ranges — all in USD):
 `gmvLast12month`, `gmv2023`, `gmv2024`, `gmv2025`, `gmv2026`, `estimatedMonthlySales`, `estimatedSalesYearly`
 
-**Traffic** (Long/Integer, for ranges):
+Traffic (Long/Integer, for ranges):
 `estimatedVisits`, `estimatedPageViews`, `alexaRank`, `rank`, `platformRank`, `rankPercentile`(Float), `platformRankPercentile`(Float)
 
-**Products numeric** (Integer/Long, for ranges):
+Products numeric (Integer/Long, for ranges):
 `productCount`, `avgPriceUsd`, `maxPrice`, `minPrice`, `variantCount`, `productImages`, `productsSold`, `vendorCount`
 
-**Employees** (Integer, for ranges):
+Employees (Integer, for ranges):
 `employeeCount`, `monthlyAppSpend`
 
-**Social Followers** (Integer, for ranges):
+Social Followers (Integer, for ranges):
 `instagramFollowers`, `instagramFollowers30d`, `instagramFollowers90d`, `tiktokFollowers`, `tiktokFollowers30d`, `tiktokFollowers90d`, `twitterFollowers`, `twitterFollowers30d`, `twitterFollowers90d`, `youtubeFollowers`, `youtubeFollowers30d`, `youtubeFollowers90d`, `facebookFollowers`, `facebookFollowers30d`, `facebookFollowers90d`, `facebookLikes`, `pinterestFollowers`(Long), `pinterestFollowers30d`(Long), `pinterestFollowers90d`(Long)
 
-**Growth** (Double, for ranges):
+Growth (Double, for ranges):
 `growth`
 
-**Tip for the agent**:
+###**Tip for the agent**:
 - Platform names (Shopify, Shopline, WooCommerce, etc.) → prefer `keyword` over `filters.platform` (fuzzy match)
 - Plugins/apps (Klaviyo, Yotpo, etc.) → use `keyword` or `filters.installedApps` / `filters.technologies`
 - Multiple regions/countries (e.g. "Europe or Africa") → array in filters: `{"region": ["Europe", "Africa"]}`
 - "Has TikTok" / "Has Email Adress" → use `exists`: `{"exists": ["tiktokUrl"]}` or `{"exists": ["emails"]}`
 - Monthly GMV → use `estimatedMonthlySales` range directly, or `gmvLast12month` (annual)
 
-### 2. Domain Analytics — `GET https://api.eccompass.ai/public/api/v1/domain/{domain}`
+### **2. Domain Analytics —** `GET https://api.eccompass.ai/public/api/v1/domain/{domain}`
 
 Full URL: `https://api.eccompass.ai/public/api/v1/domain/{domain}` (GET)
 
@@ -242,7 +237,7 @@ curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/domain/
 
 Returns 100+ fields of complete analytics for a single domain.
 
-### 3. Historical Data — `GET https://api.eccompass.ai/public/api/v1/historical/{domain}`
+### **3. Historical Data —** `GET https://api.eccompass.ai/public/api/v1/historical/{domain}`
 
 ```bash
 curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/historical/ooni.com
@@ -250,7 +245,7 @@ curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/histori
 
 Returns monthly GMV, UV, PV, and average price data from 2023 onwards. Use when the user asks for revenue trends, traffic history, or month-over-month performance.
 
-### 4. Installed Apps — `GET https://api.eccompass.ai/public/api/v1/installed-apps/{domain}`
+### **4. Installed Apps —** `GET https://api.eccompass.ai/public/api/v1/installed-apps/{domain}`
 
 ```bash
 curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/installed-apps/ooni.com
@@ -258,7 +253,7 @@ curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/install
 
 Returns the list of apps/plugins installed on a store with details: name, rating, install count, vendor info, pricing plans. Use when the user asks "what apps does X use" or "which plugins are installed".
 
-### 5. LinkedIn Contacts — `GET https://api.eccompass.ai/public/api/v1/contacts/{domain}`
+### **5. LinkedIn Contacts —** `GET https://api.eccompass.ai/public/api/v1/contacts/{domain}`
 
 ```bash
 curl -H "APEX_TOKEN: $APEX_TOKEN" https://api.eccompass.ai/public/api/v1/contacts/ooni.com
