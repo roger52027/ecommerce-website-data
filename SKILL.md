@@ -136,7 +136,7 @@ https://api.eccompass.ai
 
 ## **API Endpoints**
 
-### **1. Search — **`POST https://api.eccompass.ai/public/api/v1/search`
+### **1. Search —** `POST https://api.eccompass.ai/public/api/v1/search`
 
 Full URL: `https://api.eccompass.ai/public/api/v1/search` (POST, Content-Type: application/json)
 
@@ -220,7 +220,7 @@ Social Followers (Integer, for ranges):
 Growth (Double, for ranges):
 `growth`
 
-###**Tip for the agent**:
+### **Tip for the agent**:
 - Platform names (Shopify, Shopline, WooCommerce, etc.) → prefer `keyword` over `filters.platform` (fuzzy match)
 - Plugins/apps (Klaviyo, Yotpo, etc.) → use `keyword` or `filters.installedApps` / `filters.technologies`
 - Multiple regions/countries (e.g. "Europe or Africa") → array in filters: `{"region": ["Europe", "Africa"]}`
