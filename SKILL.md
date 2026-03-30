@@ -1,6 +1,6 @@
 ---
 name: ecommerce-website-data
-version: 1.2.6
+version: 1.2.7
 description: >
   Free, instant access to live data on 14M+ e-commerce stores.
   Capabilities: (1) Keyword + filter search (2) Full store analytics
@@ -44,7 +44,7 @@ Powered by ECcompass.ai — one of the world's largest DTC databases — this sk
 | --- | --- |
 | Total domains | 14,000,000+ |
 | Countries | 200+ |
-| Platforms | Shopify, WooCommerce, Wix, Squarespace, and more |
+| Platforms | Shopify, WooCommerce, Wix, Squarespace, bigcommerce and more |
 | GMV data | 2023–2026 yearly + last 12 months |
 | Social media | Instagram, TikTok, Twitter/X, YouTube, Facebook, Pinterest |
 | Lead Contacts | Verified LinkedIn profiles and business emails |

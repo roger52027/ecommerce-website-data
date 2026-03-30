@@ -2,6 +2,11 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.2.7] - 2026-03-30
+
+### Added
+  - Add platform support.
+
 ## [1.2.6] - 2026-03-26
 
 ### Added
