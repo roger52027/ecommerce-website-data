@@ -1,10 +1,10 @@
 ---
 name: ecommerce-website-data
-version: 1.2.7
+version: 1.2.11
 description: >
-  Free, instant access to live data on 14M+ e-commerce stores.
+  Free, instant access to live data on 14M+ Ecommerce stores.
   Capabilities: (1) Keyword + filter search (2) Full store analytics
-  (3) Historical GMV & traffic trends (4) Installed apps & plugins
+  (3) Historical ecommerce GMV & traffic trends (4) Installed apps & plugins
   (5) LinkedIn decision-maker contacts.
   Use when the user wants to search stores by keyword or niche, look up a
   specific domain, check revenue or traffic trends, see installed apps,
@@ -24,42 +24,52 @@ requires:
 
 ## **Ecommerce Website Data**
 
-Free, one-click access to live data on 14M+ ecommerce stores. Ask natural language questions like "find Shopify stores selling pet food" and get structured analytics instantly — GMV, tech stack, installed apps, and verified contacts.
+The All-in-One Skill for ecommerce intelligence. 
 
-## **Core Capabilities**
+Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 14M+ stores with 100+ analytics fields. 
 
-Keyword Search — Search across 14M+ domains by product category, brand name, or any keyword. Results ranked by relevance × GMV.
+## **What You Can Do**
 
-Domain Analytics — Get 100+ fields for any domain: GMV revenue (2023–2026), verified contact info, traffic, social media (6 platforms with 30d/90d trends), product catalog and tech stack .
+Search Stores — "Find Shopify stores selling pet food with 10k+ Instagram followers" 
 
-Competitor Analysis — Discover competitors by keyword, then drill into detailed analytics for each.
+Domain Analytics — "Show me ooni.com's GMV trend and tech stack" 
 
-JSON Export — Get raw JSON output for programmatic processing and integration.
+Lead Contacts — "Get decision-maker emails for this brand" 
+
 
 ## **Data Coverage**
 
-Powered by ECcompass.ai — one of the world's largest DTC databases — this skill delivers free, monthly-updated live data on 14M+ global ecommerce stores.
-
 | Metric | Value |
-| --- | --- |
+| :--- | :--- |
 | Total domains | 14,000,000+ |
 | Countries | 200+ |
 | Platforms | Shopify, WooCommerce, Wix, Squarespace, bigcommerce and more |
-| GMV data | 2023–2026 yearly + last 12 months |
+| GMV data | Monthly GMV from 2023 to Date |
 | Social media | Instagram, TikTok, Twitter/X, YouTube, Facebook, Pinterest |
 | Lead Contacts | Verified LinkedIn profiles and business emails |
-| Update frequency | Monthly |
+| Update frequency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Monthly |
 
-## **Analytics Fields**
 
-Each domain profile includes 100+ data points across 6 key categories:
+## **EcCompass Sub-skill Set**
 
-- Store Identity: domain, brand name, platform, plan, status, language, creation date
-- Catalog: product category, efficacy, use case, product count, price range
-- Revenue & Growth: GMV by year (2023–2026), last 12M GMV, YoY growth, est. monthly & annual sales
-- Audience & Reach: monthly visits, page views, social followers & 30/90d change (6 platforms)
-- Tech Stack: theme, installed apps, monthly app spend, technologies, vendor ratings & pricing
-- Location & Contacts: country, city, state, emails, phones, LinkedIn profiles, contact page URL
+Prefer lightweight, focused tools? We also offer standalone Sub-Skills — install only what you need.
+
+*Important: All features below are already available in *this All-in-One Skill*. The "Status" column indicates standalone Sub-Skill availability.*
+ 
+| Section | Sub-Skill | Description | Status |
+|:---------|:-----------|:-------------|:--------|
+| Site Search | Supplier Lead Filter | Filter sites by category, traffic, tech stack — surface the most qualified leads. &nbsp;&nbsp;| In dev |
+| | Competitor Discovery | Find every player in your niche before they find you. | In dev |
+| | Merchant Discovery | Find top-rated merchants carrying what you're looking for. | In dev |
+| Site Analysis | [Lead Contacts](https://clawhub.ai/roger52027/ecommerce-lead-contacts)  | Get LinkedIn profile and business email for any domain. | ✅ Live |
+| | Historical GMV | Track GMV over time — spot growth trajectories and plateaus. | In dev |
+| | Tech Stack | Reveal plugins, themes, builders, and integrations. | In dev |
+| | Traffic Monitor | Understand visits, page views, and peer rankings. | In dev |
+| | Product Analysis | See categories, catalogue size, and pricing range. | In dev |
+| | Social Media | Gauge social footprint and audience growth. | In dev |
+| Market Analysis&nbsp;&nbsp; | Builder Platform Monitor | Track market share shifts between Shopify, WooCommerce, etc. | In dev |
+| | Plugin Install Trends &nbsp;&nbsp;&nbsp; | See which plugins are gaining traction. | In dev |
+| | Category Popularity | Spot which product categories are heating up. | In dev |
 
 ## **Usage Notes**
 
@@ -71,9 +81,9 @@ Contact verification — All emails and LinkedIn profiles have been verified.
 
 ## **Scope**
 
-Can help with: Lead discovery, single-store intelligence, competitor lookup.
+Can do — Store discovery, single-store analytics, competitor lookup, tech stack detection, contact extraction
 
-Cannot do: Access store backend or admin panels, guarantee GMV figures are exact, provide real-time inventory or pricing, execute automated outreach campaigns.
+Cannot do — Access store backend, guarantee exact GMV, provide real-time inventory or pricing, execute outreach campaigns.
 
 ## **Setup**
 
@@ -275,7 +285,7 @@ Returns verified LinkedIn contacts for a domain's company: name, position, email
 
 ## **License**
 
-Proprietary — [ECcompass](https://eccompass.ai)
+Proprietary — [EcCompass AI](https://eccompass.ai)
 
 ## **Support**
 

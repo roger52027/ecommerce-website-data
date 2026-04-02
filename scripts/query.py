@@ -12,7 +12,7 @@ Usage:
   python3 query.py contacts ooni.com
 """
 
-__version__ = "1.2.7"
+__version__ = "1.2.11"
 
 import os
 import sys
@@ -317,7 +317,7 @@ def cmd_domain(args):
     print(f"  {'2026:':<10} {fmt_money(s.get('gmv2026'))}")
     print(f"  {'Last 12m:':<10} {fmt_money(s.get('gmvLast12month'))}")
     print(f"  {'Growth:':<10} {fmt_growth(s.get('growth'))}")
-    print(f"  {'Monthly:':<10} {s.get('estimatedMonthlySales', 'N/A')}")
+    print(f"  {'Monthly:':<10} {fmt_money(s.get('estimatedMonthlySales'))}")
 
     print(f"\n  Products")
     print(f"  Count: {s.get('productCount', 'N/A')}  |  Avg Price: {s.get('avgPriceFormatted') or s.get('avgPriceUsd') or 'N/A'}")
@@ -338,8 +338,8 @@ def cmd_domain(args):
     for name, fld, fld_30d in socials:
         val = s.get(fld)
         d30 = s.get(fld_30d)
-        if val:
-            d30_str = f"  (30d: {d30:+,})" if d30 else ""
+        if val is not None:
+            d30_str = f"  (30d: {d30:+,})" if d30 is not None else ""
             print(f"  {name:<12} {fmt_num(val)}{d30_str}")
 
     desc = s.get("description", "")

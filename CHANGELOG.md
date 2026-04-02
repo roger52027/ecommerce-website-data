@@ -2,6 +2,33 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.2.11] - 2026-04-01
+
+### Added
+- Description on EcCompass sub-skill structure. 
+
+## [1.2.10] - 2026-04-01
+
+### Fixed
+- Fixed social media followers display: values of 0 were incorrectly skipped due to falsy check; now uses explicit `None` comparison
+- Fixed `estimatedMonthlySales` raw number output in domain analytics; now formatted with `fmt_money()` for consistent display
+- Fixed `estimatedMonthlySales` type in schema example: was string `"500000"`, now long `500000` matching the documented type
+
+## [1.2.9] - 2026-03-31
+
+### Fixed
+  - Fixed description.
+
+## [1.2.8] - 2026-03-31
+
+### Fixed
+
+- **Monthly API quota now enforced at user level instead of per-token** — prevents users from bypassing limits by creating multiple tokens
+  - `isMonthlyLimitExceeded` now sums `monthly_used` across all tokens for the same `user_id`
+  - Frontend `monthlyUsed` field now reflects user-level total usage
+  - Redis rate limit key for monthly dimension changed from `api:ratelimit:month:{apiKey}` to `api:ratelimit:month:user:{userId}`
+  - Short-cycle limits (minute/hour/day) remain per-token to prevent single-token abuse
+
 ## [1.2.7] - 2026-03-30
 
 ### Added

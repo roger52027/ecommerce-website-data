@@ -1,15 +1,36 @@
 # EcCompass E-Commerce Website Data
 
-> Free, one-click AI agent skill for searching and analyzing 14M+ ecommerce stores.
+> The All-in-One Skill for ecommerce intelligence. 
+Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 14M+ stores with 100+ analytics fields. 
 
-Ask natural language questions like "find Shopify stores selling pet food" and get structured analytics instantly — GMV, tech stack, installed apps, and verified contacts.
+## What You Can Do
 
-## Features
+Search Stores — "Find Shopify stores selling pet food with 10k+ Instagram followers" 
 
-- **Keyword Search** — Search across 14M+ domains by product category, brand name, or any keyword. Results ranked by relevance × GMV.
-- **Domain Analytics** — Get 100+ fields for any domain: GMV revenue (2023–2026), verified contact info, traffic, social media (6 platforms with 30d/90d trends), product catalog and tech stack .
-- **Competitor Analysis** — Discover competitors by keyword, then drill into detailed analytics for each.
-- **JSON Export** — Get raw JSON output for programmatic processing and integration.
+Domain Analytics — "Show me ooni.com's GMV trend and tech stack" 
+
+Lead Contacts — "Get decision-maker emails for this brand" 
+
+## **EcCompass Sub-skill Set**
+
+Prefer lightweight, focused tools? We also offer standalone Sub-Skills — install only what you need.
+
+*Important: All features below are already available in *this All-in-One Skill*. The "Status" column indicates standalone Sub-Skill availability.*
+ 
+| Section | Sub-Skill | Description | Status |
+|:---------|:-----------|:-------------|:--------|
+| Site Search | Supplier Lead Filter | Filter sites by category, traffic, tech stack — surface the most qualified leads. &nbsp;&nbsp;| In dev |
+| | Competitor Discovery | Find every player in your niche before they find you. | In dev |
+| | Merchant Discovery | Find top-rated merchants carrying what you're looking for. | In dev |
+| Site Analysis | [Lead Contacts](https://clawhub.ai/roger52027/ecommerce-lead-contacts)  | Get LinkedIn profile and business email for any domain. | ✅ Live |
+| | Historical GMV | Track GMV over time — spot growth trajectories and plateaus. | In dev |
+| | Tech Stack | Reveal plugins, themes, builders, and integrations. | In dev |
+| | Traffic Monitor | Understand visits, page views, and peer rankings. | In dev |
+| | Product Analysis | See categories, catalogue size, and pricing range. | In dev |
+| | Social Media | Gauge social footprint and audience growth. | In dev |
+| Market Analysis&nbsp;&nbsp; | Builder Platform Monitor | Track market share shifts between Shopify, WooCommerce, etc. | In dev |
+| | Plugin Install Trends &nbsp;&nbsp;&nbsp; | See which plugins are gaining traction. | In dev |
+| | Category Popularity | Spot which product categories are heating up. | In dev |
 
 ## Setup
 
@@ -97,8 +118,8 @@ Each domain profile includes 100+ data points across 6 key categories:
 
 ## License
 
-Proprietary — [ECcompass](https://eccompass.ai)
+Proprietary — [EcCompass AI](https://eccompass.ai)
 
 ## Support
 
-For questions, issues, or feature requests, visit [https://eccompass.ai](https://eccompass.ai).
+For questions, issues, or feature requests, visit [EcCompass AI](https://eccompass.ai).

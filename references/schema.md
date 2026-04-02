@@ -290,7 +290,7 @@ Exists filter (field must be present):
         "categories": "Food & Drink",
         "countryCode4": "CN",
         "platform": "shopify",
-        "estimatedMonthlySales": "500000",
+        "estimatedMonthlySales": 500000,
         "gmv2023": 4500000,
         "gmv2024": 5200000,
         "gmv2025": 5800000,
