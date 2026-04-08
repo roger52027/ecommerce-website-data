@@ -1,7 +1,8 @@
-# EcCompass E-Commerce Website Data
+# Ecommerce Website Data — Ecommerce Store Search & Analytics
 
-> The All-in-One Skill for ecommerce intelligence. 
-Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 14M+ stores with 100+ analytics fields. 
+> Search 10M+ ecommerce stores and ecommerce websites. Get ecommerce data, Shopify store analytics, revenue trends, tech stack, and decision-maker contacts — all for free.
+
+Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 10M+ ecommerce stores with 100+ analytics fields.
 
 ## What You Can Do
 
@@ -35,9 +36,50 @@ Prefer lightweight, focused tools? We also offer standalone Sub-Skills — insta
 ## Setup
 
 **100% Free. One-minute setup.**
-1. Sign up at [https://eccompass.ai](https://eccompass.ai)
-2. Go to **Dashboard → API Access → Create Token**
-3. Set the environment variable:
+
+### Quickest Way — Just Tell OpenClaw
+
+Paste this to your OpenClaw agent and it will install the skill and configure the token for you:
+
+> Install this skill: https://clawhub.ai/roger52027/ecommerce-website-data
+> My APEX_TOKEN is: your_token_here
+
+Get your free token at [eccompass.ai](https://eccompass.ai) → Dashboard → API Access → Create Token.
+
+### Manual Install via OpenClaw CLI
+
+```bash
+openclaw skills install roger52027/ecommerce-website-data
+```
+
+Or install a specific version:
+
+```bash
+openclaw skills install roger52027/ecommerce-website-data --version 1.2.15
+```
+
+Then configure the token (choose one):
+
+**Option A — OpenClaw config** (persistent):
+
+Add to `~/.openclaw/openclaw.json`:
+
+```json
+{
+  "skills": {
+    "entries": {
+      "ecommerce-website-data": {
+        "enabled": true,
+        "env": {
+          "APEX_TOKEN": "your_token_here"
+        }
+      }
+    }
+  }
+}
+```
+
+**Option B — Shell environment variable**:
 
 ```bash
 export APEX_TOKEN="your_token_here"
@@ -70,12 +112,12 @@ python3 scripts/query.py contacts ooni.com
 
 ## Data Coverage
 
-Powered by ECcompass.ai — one of the world's largest DTC databases — this skill delivers free, monthly-updated live data on 14M+ global ecommerce stores.
+Powered by ECcompass.ai — one of the world's largest DTC databases — this skill delivers free, monthly-updated live data on 10M+ global ecommerce stores.
 | Metric | Value |
 |--------|-------|
-| Total domains | 14,000,000+ |
+| Total domains | 10,000,000+ |
 | Countries | 200+ |
-| Platforms | Shopify, WooCommerce, Magento, BigCommerce, Wix, Squarespace, and more |
+| Platforms | Shopify, WooCommerce, Wix, Squarespace, BigCommerce and more |
 | GMV data | 2023–2026 yearly + last 12 months |
 | Social media | Instagram, TikTok, Twitter/X, YouTube, Facebook, Pinterest |
 | Update frequency | Monthly |

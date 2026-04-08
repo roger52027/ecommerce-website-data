@@ -12,7 +12,7 @@ Usage:
   python3 query.py contacts ooni.com
 """
 
-__version__ = "1.2.11"
+__version__ = "1.2.16"
 
 import os
 import sys
@@ -67,7 +67,7 @@ def fmt_money(n):
 
 def fmt_num(n):
     if n is None:
-        return "0"
+        return "N/A"
     try:
         n = float(n)
         if n >= 1e6:

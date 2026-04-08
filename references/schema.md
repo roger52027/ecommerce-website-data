@@ -204,7 +204,7 @@ Additional: `facebookLikes`, `instagramPosts`, `twitterPosts`, `pinterestPosts`
 
 | Field | Description |
 |-------|-------------|
-| `growth` | Year-over-year growth rate (decimal, 0.25 = 25%) |
+| `growth` | Year-over-year growth rate (percentage, 11.5 = 11.5%) |
 
 ### Example Requests
 
@@ -272,7 +272,7 @@ Exists filter (field must be present):
 | `gmv2025` | long | 2025 GMV |
 | `gmv2026` | long | 2026 GMV |
 | `gmvLast12month` | long | Last 12 months GMV |
-| `growth` | double | YoY growth rate (decimal, 0.25 = 25%) |
+| `growth` | double | YoY growth rate (percentage, 11.5 = 11.5%) |
 
 ### Example Response
 

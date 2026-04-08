@@ -2,6 +2,44 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.2.16] - 2026-04-06
+
+### Changed
+- Optimized `claw.json` description
+
+## [1.2.15] - 2026-04-02
+
+### Added
+- Added "Quickest Way" setup: paste ClawHub URL + token directly to OpenClaw agent for automatic install & config
+- Added OpenClaw CLI install command (`openclaw skills install`) to Setup section
+- Added `openclaw.json` config option (Option A) for persistent token storage alongside shell `export` (Option B)
+- Updated data coverage from 14M+ to 10M+ across all files
+
+### Changed
+- Restructured Setup section into three tiers: Quickest Way → Manual CLI → Token config
+
+## [1.2.14] - 2026-04-02
+
+### Changed
+- Optimized `claw.json` description
+
+## [1.2.13] - 2026-04-02
+
+### Changed
+- Optimized `claw.json` description for vector similarity search — naturally embedded target keywords (ecommerce store, ecommerce website, ecommerce data, shopify store)
+- Expanded `claw.json` tags with compound keyword tags: `ecommerce-store`, `ecommerce-website`, `ecommerce-data`, `shopify-store`, `online-store`, `lead-generation`
+- Updated `SKILL.md` frontmatter description to include target search phrases
+- Updated `README.md` title and opening paragraph for better keyword coverage
+- Standardized all descriptions to use "ecommerce" (no hyphen) consistently
+
+## [1.2.12] - 2026-04-01
+
+### Fixed
+- Fixed "Adress" typo → "Address" in SKILL.md agent tips
+- Fixed "bigcommerce" → "BigCommerce" capitalization in SKILL.md platform list
+- Aligned platform list between README.md and SKILL.md (removed Magento from README to match)
+- Fixed `growth` field description in schema.md: was "decimal, 0.25 = 25%", now "percentage, 11.5 = 11.5%" to match actual API behavior and `fmt_growth` formatting
+
 ## [1.2.11] - 2026-04-01
 
 ### Added
@@ -86,7 +124,7 @@ All notable changes to this skill will be documented in this file.
 
 ### Added
 
-- Keyword search across 14M+ e-commerce domains via ECcompass REST API
+- Keyword search across 10M+ e-commerce domains via ECcompass REST API
 - Full domain analytics with 100+ fields (GMV, traffic, social media, tech stack, etc.)
 - Python CLI tool (`scripts/query.py`) with `search` and `domain` subcommands
 - JSON export support (`--json` flag)

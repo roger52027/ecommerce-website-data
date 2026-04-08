@@ -1,17 +1,17 @@
 ---
 name: ecommerce-website-data
-version: 1.2.11
+version: 1.2.16
 description: >
-  Free, instant access to live data on 14M+ Ecommerce stores.
-  Capabilities: (1) Keyword + filter search (2) Full store analytics
-  (3) Historical ecommerce GMV & traffic trends (4) Installed apps & plugins
-  (5) LinkedIn decision-maker contacts.
-  Use when the user wants to search stores by keyword or niche, look up a
-  specific domain, check revenue or traffic trends, see installed apps,
-  find decision-maker contacts, or run competitor analysis.
-  Triggers: "search Shopify stores selling pet food", "look up ooni.com",
-  "what apps does X use", "revenue trend for X", "find contacts for X",
-  "competitor analysis for nike.com".
+  Free, instant access to ecommerce data on 10M+ ecommerce stores and
+  ecommerce websites. Search Shopify stores, WooCommerce sites, and more.
+  Capabilities: (1) Search ecommerce stores by keyword & filters
+  (2) Full store analytics with 100+ data fields (3) Historical GMV &
+  traffic trends (4) Installed apps & tech stack (5) LinkedIn contacts.
+  Use when the user wants ecommerce website data, Shopify store analytics,
+  competitor analysis, revenue trends, or decision-maker contacts.
+  Triggers: "search ecommerce stores selling pet food",
+  "find Shopify stores in US", "ecommerce website data for ooni.com",
+  "what apps does X use", "revenue trend for X", "competitor analysis".
 author: eccompass.ai
 website: https://eccompass.ai
 license: Proprietary
@@ -26,7 +26,7 @@ requires:
 
 The All-in-One Skill for ecommerce intelligence. 
 
-Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 14M+ stores with 100+ analytics fields. 
+Powered by [EcCompass AI](https://eccompass.ai) — one of the world's largest DTC databases — this skill delivers *free, live data* on 10M+ stores with 100+ analytics fields. 
 
 ## **What You Can Do**
 
@@ -41,9 +41,9 @@ Lead Contacts — "Get decision-maker emails for this brand"
 
 | Metric | Value |
 | :--- | :--- |
-| Total domains | 14,000,000+ |
+| Total domains | 10,000,000+ |
 | Countries | 200+ |
-| Platforms | Shopify, WooCommerce, Wix, Squarespace, bigcommerce and more |
+| Platforms | Shopify, WooCommerce, Wix, Squarespace, BigCommerce and more |
 | GMV data | Monthly GMV from 2023 to Date |
 | Social media | Instagram, TikTok, Twitter/X, YouTube, Facebook, Pinterest |
 | Lead Contacts | Verified LinkedIn profiles and business emails |
@@ -89,9 +89,43 @@ Cannot do — Access store backend, guarantee exact GMV, provide real-time inven
 
 **100% Free. One-minute setup.**
 
-1. Sign up at [https://eccompass.ai](https://eccompass.ai)
-2. Go to **Dashboard → API Access → Create Token**
-3. Set the environment variable:
+### Quickest Way — Just Tell OpenClaw
+
+Paste this to your OpenClaw agent and it will install the skill and configure the token for you:
+
+> Install this skill: https://clawhub.ai/roger52027/ecommerce-website-data
+> My APEX_TOKEN is: your_token_here
+
+Get your free token at [eccompass.ai](https://eccompass.ai) → Dashboard → API Access → Create Token.
+
+### Manual Install via OpenClaw CLI
+
+```bash
+openclaw skills install roger52027/ecommerce-website-data
+```
+
+Then configure the token (choose one):
+
+**Option A — OpenClaw config** (persistent):
+## 
+Add to `~/.openclaw/openclaw.json`:
+
+```json
+{
+  "skills": {
+    "entries": {
+      "ecommerce-website-data": {
+        "enabled": true,
+        "env": {
+          "APEX_TOKEN": "your_token_here"
+        }
+      }
+    }
+  }
+}
+```
+
+**Option B — Shell environment variable**:
 
 ```bash
 export APEX_TOKEN="your_token_here"
@@ -234,7 +268,7 @@ Growth (Double, for ranges):
 - Platform names (Shopify, Shopline, WooCommerce, etc.) → prefer `keyword` over `filters.platform` (fuzzy match)
 - Plugins/apps (Klaviyo, Yotpo, etc.) → use `keyword` or `filters.installedApps` / `filters.technologies`
 - Multiple regions/countries (e.g. "Europe or Africa") → array in filters: `{"region": ["Europe", "Africa"]}`
-- "Has TikTok" / "Has Email Adress" → use `exists`: `{"exists": ["tiktokUrl"]}` or `{"exists": ["emails"]}`
+- "Has TikTok" / "Has Email Address" → use `exists`: `{"exists": ["tiktokUrl"]}` or `{"exists": ["emails"]}`
 - Monthly GMV → use `estimatedMonthlySales` range directly, or `gmvLast12month` (annual)
 
 ### **2. Domain Analytics —** `GET https://api.eccompass.ai/public/api/v1/domain/{domain}`
