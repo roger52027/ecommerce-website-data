@@ -2,6 +2,16 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.2.17] - 2026-04-15
+
+### Fixed
+- Unified `growth` unit description to percentage (`11.5 = 11.5%`) in schema to remove conflicting definitions
+- Updated range filter example from `--min-growth 0.2` to `--min-growth 20` to match percentage semantics
+- Updated CLI `--min-growth` help text to percentage format for consistency with API behavior
+
+### Changed
+- Bumped skill version from `1.2.16` to `1.2.17` across `SKILL.md`, `claw.json`, and `scripts/query.py`
+
 ## [1.2.16] - 2026-04-06
 
 ### Changed

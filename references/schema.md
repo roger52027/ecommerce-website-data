@@ -360,7 +360,7 @@ APEX_TOKEN: <your_token>
 | `gmv2025` | long | 2025 GMV |
 | `gmv2026` | long | 2026 GMV |
 | `gmvLast12month` | long | Last 12 months GMV (most commonly used) |
-| `growth` | double | YoY growth rate (decimal) |
+| `growth` | double | YoY growth rate (percentage, 11.5 = 11.5%) |
 | `estimatedMonthlySales` | long | Estimated monthly GMV (USD) |
 | `estimatedSalesYearly` | long | Estimated yearly GMV (USD) |
 

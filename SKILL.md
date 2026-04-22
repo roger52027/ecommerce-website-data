@@ -1,6 +1,6 @@
 ---
 name: ecommerce-website-data
-version: 1.2.16
+version: 1.2.17
 description: >
   Free, instant access to ecommerce data on 10M+ ecommerce stores and
   ecommerce websites. Search Shopify stores, WooCommerce sites, and more.

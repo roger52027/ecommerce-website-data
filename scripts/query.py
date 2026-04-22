@@ -12,7 +12,7 @@ Usage:
   python3 query.py contacts ooni.com
 """
 
-__version__ = "1.2.16"
+__version__ = "1.2.17"
 
 import os
 import sys
@@ -385,7 +385,7 @@ def main():
     p_search.add_argument("--status", help="Site status filter")
     p_search.add_argument("--language", help="Language code filter")
     p_search.add_argument("--min-gmv", type=float, help="Minimum GMV last 12 months (USD)")
-    p_search.add_argument("--min-growth", type=float, help="Minimum YoY growth rate (decimal)")
+    p_search.add_argument("--min-growth", type=float, help="Minimum YoY growth rate (percentage, e.g. 20 = 20%)")
     p_search.add_argument("--min-employees", type=float, help="Minimum employee count")
     p_search.add_argument("--min-instagram", type=float, help="Minimum Instagram followers")
     p_search.add_argument("--min-tiktok", type=float, help="Minimum TikTok followers")

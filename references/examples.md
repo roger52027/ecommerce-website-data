@@ -57,7 +57,7 @@ python3 scripts/query.py search --country US --platform shopify --min-gmv 100000
 Find stores with significant social media presence and high growth:
 
 ```bash
-python3 scripts/query.py search "fashion" --min-instagram 10000 --min-growth 0.2 --sort growth
+python3 scripts/query.py search "fashion" --min-instagram 10000 --min-growth 20 --sort growth
 ```
 
 ## Example 5: Get Domain Analytics
