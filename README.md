@@ -12,27 +12,6 @@ Domain Analytics — "Show me ooni.com's GMV trend and tech stack"
 
 Lead Contacts — "Get decision-maker emails for this brand" 
 
-## **EcCompass Sub-skill Set**
-
-Prefer lightweight, focused tools? We also offer standalone Sub-Skills — install only what you need.
-
-*Important: All features below are already available in *this All-in-One Skill*. The "Status" column indicates standalone Sub-Skill availability.*
- 
-| Section | Sub-Skill | Description | Status |
-|:---------|:-----------|:-------------|:--------|
-| Site Search | Supplier Lead Filter | Filter sites by category, traffic, tech stack — surface the most qualified leads. &nbsp;&nbsp;| In dev |
-| | Competitor Discovery | Find every player in your niche before they find you. | In dev |
-| | Merchant Discovery | Find top-rated merchants carrying what you're looking for. | In dev |
-| Site Analysis | [Lead Contacts](https://clawhub.ai/roger52027/ecommerce-lead-contacts)  | Get LinkedIn profile and business email for any domain. | ✅ Live |
-| | Historical GMV | Track GMV over time — spot growth trajectories and plateaus. | In dev |
-| | Tech Stack | Reveal plugins, themes, builders, and integrations. | In dev |
-| | Traffic Monitor | Understand visits, page views, and peer rankings. | In dev |
-| | Product Analysis | See categories, catalogue size, and pricing range. | In dev |
-| | Social Media | Gauge social footprint and audience growth. | In dev |
-| Market Analysis&nbsp;&nbsp; | Builder Platform Monitor | Track market share shifts between Shopify, WooCommerce, etc. | In dev |
-| | Plugin Install Trends &nbsp;&nbsp;&nbsp; | See which plugins are gaining traction. | In dev |
-| | Category Popularity | Spot which product categories are heating up. | In dev |
-
 ## Setup
 
 **100% Free. One-minute setup.**
